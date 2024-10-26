@@ -28,13 +28,15 @@ fetch('https://fakestoreapi.com/products')
 for(let productList of json){
 let container =document.getElementById("container")
 // console.log(productList)
-container.innerHTML+=`<div class="card" style="width: 18rem;">
+container.innerHTML+=`<div class="col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 col-xxl-3">
+<div class="card">
   <img class="card-img-top" src=${productList.image} alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">${productList.title}</h5>
     <p class="card-text">${productList.description}</p>
-    <span>${productList.price}</span>
-   
+    <span class="text-info">${productList.price}</span>
+    <button class="btn-succsess">Add to Cart</button>
+   </div>
   </div>
 </div>`
 }
